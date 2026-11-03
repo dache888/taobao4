@@ -7,17 +7,21 @@
 <meta name="description" content="淘宝超级红包活动，天天开红包，最高26888元，还有现金红包、超级金币、天猫优惠券等奖励。">
 <style>
   :root{
-    --wine:#5d0a12;
-    --wine-2:#3f050b;
-    --gold:#e9c37a;
-    --gold-hi:#fff2cc;
-    --cream:#fdf6ea;
-    --ink:#2a1512;
+    --wine:#a3121a;
+    --wine-2:#7d0a10;
+    --gold:#ffd06b;
+    --gold-hi:#fff6d8;
+    --cream:#c21018;
+    --ink:#fff6e4;
+    --card:#fff8ee;
   }
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
   body{
     font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-    background:var(--cream);
+    background:
+      radial-gradient(circle at 50% 0%, rgba(255,214,107,.16), transparent 42%),
+      linear-gradient(180deg,#d4171f 0%,#c00f16 40%,#a30d13 100%) fixed;
+    background-attachment:fixed;
     color:var(--ink);
     padding-bottom:96px;
     overflow-x:hidden;
@@ -29,7 +33,7 @@
     background:
       radial-gradient(ellipse at 78% 8%, rgba(233,195,122,.30), transparent 52%),
       radial-gradient(ellipse at 8% 92%, rgba(233,195,122,.14), transparent 55%),
-      linear-gradient(158deg,#7a0f18 0%, #5d0a12 42%, #35040a 100%);
+      linear-gradient(158deg,#f0272c 0%, #d4171f 45%, #a80e14 100%);
     padding:18px 20px 74px;
     overflow:hidden;
   }
@@ -53,7 +57,7 @@
     flex:0 0 42px; width:42px; height:42px; border-radius:50%;
     display:grid; place-items:center;
     background:linear-gradient(145deg,var(--gold-hi),var(--gold) 55%,#b8893f);
-    color:#5d0a12; font-size:19px; font-weight:900;
+    color:#a3121a; font-size:19px; font-weight:900;
     box-shadow:0 0 0 1px rgba(233,195,122,.6), 0 6px 16px rgba(0,0,0,.42);
     position:relative;
   }
@@ -179,7 +183,7 @@
 
   .teach{
     position:relative; z-index:5; margin-top:-52px;
-    background:#fff;
+    background:var(--card);
     border-radius:4px;
     border:1px solid rgba(93,10,18,.10);
     box-shadow:0 18px 44px rgba(60,10,16,.22);
@@ -188,7 +192,8 @@
   .teach-top{
     display:flex; align-items:center; justify-content:space-between;
     padding:13px 16px;
-    background:linear-gradient(90deg,#5d0a12,#7a0f18);
+    background:linear-gradient(90deg,#c00f16,#e8202a);
+    box-shadow:inset 0 -1px 0 rgba(255,214,107,.35);
   }
   .teach-top b{
     color:var(--gold-hi); font-size:13.5px; font-weight:800; letter-spacing:2.5px;
@@ -209,17 +214,17 @@
     flex:0 0 34px; height:34px; border-radius:50%;
     display:grid; place-items:center;
     color:var(--gold-hi); font-size:13px; font-weight:900;
-    background:linear-gradient(150deg,#7a0f18,#3f050b);
-    box-shadow:0 0 0 3px rgba(233,195,122,.18);
+    background:linear-gradient(150deg,#e8202a,#b40e14);
+    box-shadow:0 0 0 3px rgba(212,23,31,.16);
   }
   .step-c{ flex:1; min-width:0; }
   .step-h{
-    font-size:13.5px; font-weight:800; color:#5d0a12; letter-spacing:.4px;
+    font-size:13.5px; font-weight:800; color:#a3121a; letter-spacing:.4px;
     display:flex; align-items:center; gap:6px; flex-wrap:wrap;
   }
   .step-h i{
     font-style:normal; font-size:9.5px; font-weight:700;
-    color:#8a5a1c; background:rgba(233,195,122,.28);
+    color:#a3121a; background:rgba(212,23,31,.1);
     padding:1.5px 6px; border-radius:2px; letter-spacing:.3px;
   }
   .step-p{ margin-top:5px; font-size:12px; line-height:1.72; color:#6b5048; }
@@ -259,15 +264,15 @@
     flex:1; font-size:7.5px; padding:3px 0; border-radius:2px;
     background:#f0ece7; color:#7a6560;
   }
-  .mini-allow .btns .on{ background:#5d0a12; color:var(--gold-hi); font-weight:800; animation:pulse2 1.6s ease-in-out infinite; }
+  .mini-allow .btns .on{ background:#d4171f; color:#fff; font-weight:800; animation:pulse2 1.6s ease-in-out infinite; }
   @keyframes pulse2{
-    0%,100%{ box-shadow:0 0 0 0 rgba(93,10,18,.35); }
-    50%{ box-shadow:0 0 0 5px rgba(93,10,18,0); }
+    0%,100%{ box-shadow:0 0 0 0 rgba(212,23,31,.35); }
+    50%{ box-shadow:0 0 0 5px rgba(212,23,31,0); }
   }
   .mini-app{ gap:8px; }
   .mini-app .tag{
     font-size:9px; font-weight:800; color:var(--gold-hi);
-    background:linear-gradient(150deg,#7a0f18,#3f050b);
+    background:linear-gradient(150deg,#e8202a,#b40e14);
     padding:5px 10px; border-radius:2px; letter-spacing:.5px;
   }
   .mini-app .ok{ font-size:8.5px; color:#2f7d4f; font-weight:800; }
@@ -275,20 +280,27 @@
   /* ================= 红包主卡 ================= */
   .voucher{
     position:relative; margin-top:20px;
-    background:linear-gradient(165deg,#7a0f18 0%,#5d0a12 52%,#38050b 100%);
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(255,214,107,.34), transparent 62%),
+      linear-gradient(165deg,#f52a31 0%,#d4171f 50%,#ab0d13 100%);
     border-radius:5px; overflow:hidden;
-    box-shadow:0 18px 44px rgba(60,10,16,.26);
-    border:1px solid rgba(233,195,122,.28);
+    box-shadow:0 18px 44px rgba(110,0,6,.4), inset 0 0 0 1px rgba(255,214,107,.55), inset 0 0 26px rgba(255,214,107,.14);
   }
   .voucher::before, .voucher::after{
     content:""; position:absolute; z-index:2;
     width:18px; height:18px; border-radius:50%;
-    background:var(--cream);
+    background:#c40f16;
     top:50%; transform:translateY(-50%);
   }
   .voucher::before{ left:-9px; }
   .voucher::after{ right:-9px; }
-  .v-inner{ padding:20px 26px 18px; text-align:center; }
+  .v-inner{ padding:20px 26px 18px; text-align:center; position:relative; }
+  .v-inner::before, .v-inner::after{
+    content:""; position:absolute; top:12px; width:8px; height:8px;
+    border:1.5px solid rgba(255,214,107,.7); transform:rotate(45deg);
+  }
+  .v-inner::before{ left:14px; }
+  .v-inner::after{ right:14px; }
   .v-eyebrow{
     display:inline-flex; align-items:center; gap:8px;
     color:rgba(255,242,204,.62); font-size:10px; letter-spacing:3px;
@@ -337,7 +349,7 @@
     animation:sweep 3.4s ease-in-out infinite;
   }
   @keyframes sweep{ 0%{left:-70px;} 60%,100%{left:130%;} }
-  .v-btn .t1{ font-size:18px; font-weight:900; color:#5d0a12; letter-spacing:4px; text-indent:4px; }
+  .v-btn .t1{ font-size:18px; font-weight:900; color:#a3121a; letter-spacing:4px; text-indent:4px; }
   .v-btn .t2{ font-size:10px; font-weight:700; color:#8a5a1c; letter-spacing:1.5px; }
   .v-note{
     margin-top:13px; color:rgba(255,242,204,.66); font-size:11px; line-height:1.65;
@@ -346,13 +358,13 @@
 
   /* ================= 玩法 ================= */
   .sec{ margin:28px 0 14px; display:flex; align-items:baseline; gap:9px; }
-  .sec b{ font-size:15px; font-weight:800; color:#5d0a12; letter-spacing:2px; }
-  .sec i{ width:20px; height:1px; background:rgba(93,10,18,.3); display:block; }
-  .sec span{ font-size:10.5px; color:#a98d80; letter-spacing:1px; }
+  .sec b{ font-size:15px; font-weight:800; color:#fff6d8; letter-spacing:2px; }
+  .sec i{ width:20px; height:1px; background:rgba(255,214,107,.6); display:block; }
+  .sec span{ font-size:10.5px; color:rgba(255,240,214,.72); letter-spacing:1px; }
 
   .item{
     display:block; text-decoration:none; color:inherit;
-    background:#fff; border:1px solid rgba(93,10,18,.09);
+    background:var(--card); border:1px solid rgba(255,214,107,.5);
     border-radius:4px; padding:15px 16px;
     margin-bottom:10px;
     position:relative; overflow:hidden;
@@ -361,13 +373,13 @@
   .item:active{ transform:scale(.987); }
   .item::before{
     content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
-    background:linear-gradient(180deg,#c79a45,#7a0f18);
+    background:linear-gradient(180deg,#ffd06b,#d4171f);
   }
   .i-top{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
   .i-name{ font-size:14.5px; font-weight:800; color:#3a1a16; letter-spacing:.3px; }
   .i-tag{
     flex:0 0 auto; font-size:9.5px; font-weight:800; letter-spacing:1px;
-    color:#8a5a1c; border:1px solid rgba(199,154,69,.55);
+    color:#a3121a; border:1px solid rgba(212,23,31,.4);
     border-radius:2px; padding:2px 6px;
   }
   .i-desc{ margin-top:5px; font-size:12px; color:#7d655c; }
@@ -379,7 +391,7 @@
   .i-meta div{ font-size:11.5px; color:#9a8177; }
   .i-meta div b{ color:#a8121f; font-size:12.5px; margin-left:3px; }
   .i-cta{
-    margin-left:auto; font-size:12.5px; font-weight:800; color:#5d0a12;
+    margin-left:auto; font-size:12.5px; font-weight:800; color:#a3121a;
     display:flex; align-items:center; gap:3px;
   }
   .i-cta::after{ content:"›"; font-size:15px; }
@@ -388,23 +400,23 @@
   .dock{
     position:fixed; left:0; right:0; bottom:0; z-index:20;
     padding:10px 18px calc(10px + env(safe-area-inset-bottom));
-    background:linear-gradient(180deg,rgba(253,246,234,0),var(--cream) 40%);
+    background:linear-gradient(180deg,rgba(190,15,22,0),rgba(190,15,22,.94) 40%);
   }
   .dock a{
     display:flex; align-items:center; justify-content:center; gap:8px;
     max-width:520px; margin:0 auto;
-    background:linear-gradient(180deg,#7a0f18,#4a060d);
-    color:var(--gold-hi); font-size:15px; font-weight:900; letter-spacing:3px;
+    background:linear-gradient(180deg,#ffd97a,#f0b23c);
+    color:#a3121a; font-size:15px; font-weight:900; letter-spacing:3px;
     padding:15px; border-radius:4px; text-decoration:none;
-    border:1px solid rgba(233,195,122,.5);
-    box-shadow:0 10px 26px rgba(60,10,16,.34);
+    border:1px solid rgba(255,246,216,.75);
+    box-shadow:0 10px 26px rgba(120,0,8,.42);
   }
 
   .notice{
-    margin:22px 0 6px; font-size:11px; color:#b3a096; line-height:1.85; text-align:center;
+    margin:22px 0 6px; font-size:11px; color:rgba(255,240,214,.62); line-height:1.85; text-align:center;
   }
   .foot{
-    text-align:center; font-size:10px; color:#c7b8ad;
+    text-align:center; font-size:10px; color:rgba(255,240,214,.45);
     letter-spacing:1.5px; padding:8px 0 16px;
   }
 
@@ -416,6 +428,21 @@
   }
   .wxbar b{ color:var(--gold); }
   .wxbar .x{ margin-left:8px; opacity:.7; padding:0 4px; }
+
+  /* ================= 氛围：灯笼 + 光斑 ================= */
+  .lanterns{ position:fixed; top:0; left:0; right:0; height:0; z-index:1; pointer-events:none; }
+  .lanterns i{
+    position:absolute; top:2px; width:26px; height:32px; border-radius:50% 50% 46% 46%/40% 40% 60% 60%;
+    background:linear-gradient(160deg,#ff5a4e,#d4171f 60%,#8f060c);
+    box-shadow:0 0 18px rgba(255,140,60,.55), inset 0 -4px 8px rgba(0,0,0,.22);
+  }
+  .lanterns i::before{ content:""; position:absolute; top:-7px; left:50%; width:1px; height:7px; background:rgba(255,214,107,.7); transform:translateX(-50%); }
+  .lanterns i::after{ content:""; position:absolute; bottom:-6px; left:50%; width:2px; height:7px; background:#ffd06b; transform:translateX(-50%); }
+  .lanterns i:nth-child(1){ left:16px; animation:sw 4.2s ease-in-out infinite; }
+  .lanterns i:nth-child(2){ right:16px; transform:scale(.86); animation:sw 4.2s ease-in-out infinite .9s; }
+  @keyframes sw{ 0%,100%{ transform:rotate(-4deg); } 50%{ transform:rotate(4deg); } }
+  .lanterns i:nth-child(2){ transform-origin:top center; }
+  .lanterns i:nth-child(1){ transform-origin:top center; }
 
   .fade{ animation:rise .55s ease both; }
   @keyframes rise{ from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:none;} }
@@ -501,6 +528,8 @@
   <div class="deco deco-r1"></div>
   <div class="deco deco-r2"></div>
 </header>
+
+<div class="lanterns" aria-hidden="true"><i></i><i></i></div>
 
 <main class="shell">
 
